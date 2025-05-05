@@ -2,8 +2,7 @@ name: Test CI/CD with GitHub Actions
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
     paths:
       - Dockerfile
 
