@@ -2,10 +2,9 @@ name: Test CI/CD with GitHub Actions
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - Dockerfile
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 
 jobs:
   build-push-image:
@@ -33,3 +32,7 @@ jobs:
       - name: Push Docker image
         run: |
           docker push ghcr.io/poginipaul/wood-fw:v1
+
+      - name: Pull Docker Image
+        run: |
+          docker pull ghcr.io/poginipaul/wood-fw:v1
