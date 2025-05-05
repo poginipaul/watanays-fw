@@ -10,7 +10,7 @@ on:
 
 jobs:
   build-push-image: #name of the job
-    runs-on: debian:bullseye
+    runs-on: ubuntu-latest #debian:bullseye
 
   permissions:
     contents: read
